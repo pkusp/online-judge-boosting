@@ -1,4 +1,10 @@
-# 经典算法归纳
+# *online judge* 目录
+- [一些经典算法](./classic_algorithm)
+- [kickstart](./kickstart)
+- [Leet Code](./leetCode)
+- [牛客](./niuke)
+
+# 经典算法原理
 
 ## KMP算法
 - [next数组的计算原理](http://www.ruanyifeng.com/blog/2013/05/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm.html)
