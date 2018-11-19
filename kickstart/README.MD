@@ -1,10 +1,7 @@
-# 经典算法归纳
+# Google [kickstart](https://code.google.com/codejam/kickstart/)
 
-## KMP算法
-- [next数组的计算原理](http://www.ruanyifeng.com/blog/2013/05/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm.html)
+## kickstart
+    本项目为`kickstart`记录(点击上面链接)，第一次参加kickstart是`2018-round H` 总共三道题，时长3h，AC 两道
 
 
-
-## 容斥原理的DP
-- 一道[腾讯黑客马拉松编程题](http://acm.hdu.edu.cn/showproblem.php?pid=4532)
 
