@@ -12,6 +12,9 @@
 
 
 def str_match(p,t):
+    """
+    暴力的匹配算法
+    """
     p_len = len(p)
     t_len = len(t)
     for i in range(t_len - p_len+1):
@@ -22,7 +25,11 @@ def str_match(p,t):
                 return i
     return -1
 
-def get_next(pattern):
+def get_next(pattern:str)->list:
+    """
+    :pattern: 待识别子串
+    :return: next数组
+    """
     k=0
     next = [0]*len(pattern)
     for i in range(1,len(pattern)):
@@ -33,12 +40,41 @@ def get_next(pattern):
         next[i] = k
     return next
 
-
+def kmp(pattern,t):
+    """
+    :pattern: 子串
+    :t: 主串
+    """
+    j=0
+    next = get_next(pattern)
+    for i in range(len(t)):
+        while j>0 and pattern[j] != t[i]:
+            j = next[j-1]
+        if pattern[j] == t[i]:
+            j+=1
+        if j==len(pattern):
+            return i-j+1
+    return -1
 
 if __name__ == '__main__':
-    pp = 'abcab'
-    # tt = 'abc'
-    # pos = str_match(pp,tt)
-    # print(pos)
-    next = get_next(pp)
-    print("next:",next)
+    p='abca'
+    t='abcaa'
+    res = kmp(p,t)
+    print(res)
+
+
+
+
+
+
+
+
+
+
+# if __name__ == '__main__':
+#     pp = 'abcab'
+#     # tt = 'abc'
+#     # pos = str_match(pp,tt)
+#     # print(pos)
+#     next = get_next(pp)
+#     print("next:",next)
