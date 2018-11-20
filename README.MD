@@ -28,12 +28,35 @@ pass
 ### 2. 着色问题
 
 ### 3. 背包问题
-推荐阅读[背包问题九讲]()
+推荐阅读[背包问题九讲](https://github.com/tianyicui/pack/blob/master/V2.pdf)
 - 0-1背包
 - 完全背包
-
 ### 4. 回溯问题
 
 ### 5. 单调栈问题
 
-### 6. 
+### 6. 常见`DP`问题
+- LCS
+- 编辑距离
+- 
+### 7. 寻路问题
+
+推荐阅读[寻路问题](https://github.com/tianyicui/DP-Book/blob/master/path.pdf)
+
+- 特殊图的寻路
+
+- 一般图的寻路
+### 8. 常见分治算法
+
+### 9. 图相关算法
+
+### 10. 遍历的非递归算法
+- 树的遍历
+- 图的遍历
+
+
+---
+## 计算机重要基础知识
+- [c++](./newcoder/README.MD)
+- [计算机操作系统、网络](./newcoder/README.MD)
+- [设计模式](./newcoder/README.MD)
