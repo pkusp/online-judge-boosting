@@ -449,5 +449,88 @@ B. 异步
 
     TCP 和 HTTP区别： http://blog.csdn.net/lemonxuexue/article/details/4485877
  ```
+ 14. 线程和进程的联系和区别
 
+      http://blog.csdn.NET/wolenski/article/details/7969908
+
+15. 线程有哪几种状态
+
+     http://blog.csdn.Net/wolenski/article/details/7969908
+
+ 
+16. 进程间的通信方式
+
+     管道、有名管道、信号、共享内存、消息队列、信号量、套接字、文件.
+
+17. 线程同步和线程互斥的区别
+
+    http://blog.csdn.net/wolenski/article/details/7969908
+
+ 22. TCP三次握手和四次挥手, 以及各个状态的作用
+
+     http://hi.baidu.com/suxinpingtao51/item/be5f71b3a907dbef4ec7fd0e?qq-pf-to=pcqq.c2c
+
+ 26. 使用过的 gdb 命令
+
+      http://blog.csdn.net/dadalan/article/details/3758025
+
+ 
+
+27. 常见算法
+
+       快速排序、堆排序和归并排序
+
+       堆排序 ： http://blog.csdn.net/xiaoxiaoxuewen/article/details/7570621
+
+       快速排序、归并排序： http://blog.csdn.net/morewindows/article/details/6684558
+
+       稳定性分析 http://baike.baidu.com/link?url=ueoZ3sNIOvMNPrdCKbd8mhfebC85B4nRc-7hPEJWi-hFo5ROyWH2Pxs9RtvLFRJL
+
+ 
+29. 静态链表和动态链表的区别
+
+      http://blog.csdn.net/toonny1985/article/details/4868786
+
+ 
+
+31. 大并发( epoll )
+
+       [优点](
+             http://blog.csdn.net/sunyurun/article/details/8194979)
+
+       [实例](
+             http://www.cnblogs.com/ggjucheng/archive/2012/01/17/2324974.html
+       )
+
+32. 海量数据处理的知识点，（hash表， hash统计）
+
+    hash表： http://hi.baidu.com/05104106/item/62736054402852c09e26679b
+
+    海量数据处理方法： http://blog.csdn.net/v_july_v/article/details/7382693
+
+ 
+
+18. 线程同步的方式
+
+     Linux:   互斥锁、条件变量和信号量
+
+     http://blog.csdn.net/zsf8701/article/details/7844316
+
+ 
  ## 三、设计模式
+
+ - [17个设计模式介绍及代码](https://www.cnblogs.com/chengjundu/p/8473564.html)
+
+ - [三个常用的设计模式](https://blog.csdn.net/weixin_43475124/article/details/83796010)
+
+
+# 参考文献
+- [c++面试锦集](https://www.cnblogs.com/Y1Focus/p/6707121.html)
+
+- [c++面试题](https://blog.csdn.net/a854073071/article/details/51307656?from=singlemessage&isappinstalled=0)
+
+- [常用设计模式](https://www.cnblogs.com/chengjundu/p/8473564.html)
+
+- [三个设计模式](https://blog.csdn.net/weixin_43475124/article/details/83796010)
+
+- [Effective c++笔记](https://www.cnblogs.com/chengjundu/p/8288774.html)
