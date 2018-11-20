@@ -1,4 +1,5 @@
 ## 目录
+> 更新中...
 ### 1. [*classic_algorithm*(一些经典算法)](./classic_algorithm)
 ### 2. [*kickstart*](./kickstart)
 ### 3. [*leetCode*](./leetCode)
@@ -53,7 +54,9 @@ pass
 ### 10. 遍历的非递归算法
 - 树的遍历
 - 图的遍历
-
+### 11. KMP
+- [KMP的原理及代码(C++版)](./classic_algorithm/kmp.MD)
+- [KMP的代码python版(可运行)](./classic_algorithm/kmp.py)
 
 ---
 ## 计算机重要基础知识
