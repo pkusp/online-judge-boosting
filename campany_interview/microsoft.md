@@ -1,7 +1,8 @@
 
 ## interview
 
-[see also..](../crawler/ms_interview.txt)
+[see also..](../crawler/ms_interview.md)
+
 ---
 
 - [suzhou stca 2019-10](https://www.nowcoder.com/discuss/315360?type=2&order=0&pos=5&page=1)
