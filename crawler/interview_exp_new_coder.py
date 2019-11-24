@@ -105,7 +105,7 @@ def get_content(url):
 def save_content(contents):
     with open("ms_interview.text",mode='w') as f:
         for content in contents:
-            f.write(content+"\n")
+            f.write(content.replace("\n","")+"\n")
 
 
 def main():
