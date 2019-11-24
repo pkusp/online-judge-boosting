@@ -91,7 +91,7 @@ def get_content(url):
 
 
 def save_content(contents):
-    with open("ms_interview.txt",mode='w') as f:
+    with open("ms_interview.md",mode='w') as f:
         for content in contents:
             f.write(content.replace("\n","")+"\n")
 
@@ -99,9 +99,16 @@ def save_content(contents):
 def main():
     ms_interview = [ ]
     url_list = get_url_list()
+    i = 0
     for title,url in url_list:
+        i+=1
         text = get_content(url)
-        ms_interview.append(("url: ["+url+"] title: ["+title+"] \ncontent: "+text))
+        # ms_interview.append(("url: ["+url+"] title: ["+title+"] \ncontent: "+text))
+
+        line = "{}. [{}]({}) : {}".format(i,title,url,text)
+        ms_interview.append(line)
+
+
     print(ms_interview)
     save_content(ms_interview)
 
