@@ -9,13 +9,23 @@
 
 这一行开始写关于本文件的说明与解释
 """
-
+import re
 import logging
 import os
-
+from bs4 import BeautifulSoup
+import bs4
 import requests
 import tqdm
-from pyquery import PyQuery as pq
+# from pyquery import PyQuery as pq
+
+
+ms_exp_url = '/discuss/tag/146?type=2&order=0&query='  ## type=2 interview_exp
+
+exp_url = "https://www.nowcoder.com/discuss?type=2&order=0&pageSize=30&expTag=0&page="
+
+
+root_url = 'https://www.nowcoder.com'
+
 
 headers = {
     ":authority": "www.nowcoder.com",
@@ -35,14 +45,12 @@ headers = {
 
 }
 
+
 def get_url_list():
-    root_url = 'https://www.nowcoder.com'
 
     page = 'https://www.nowcoder.com/discuss/tag/146?type=2&order=0&pageSize=30&expTag=0&query=&page='
 
-
-    exp_url = '/discuss/tag/146?type=2&order=0&query='  ## type=2 interview_exp
-    # type: interview_exp
+    # type:interview_exp
     # pos: topic position
     # page:page
     exp = 'https://www.nowcoder.com/discuss/315360?type=2&order=0&pos=5&page=1'
@@ -53,28 +61,72 @@ def get_url_list():
 
         base_url = page+str(i)
 
-        page_res = requests.get(root_url, headers)
-
+        page_res = requests.get(base_url)
         if page_res.status_code == 200:
-            res_utf = (res.content).decode('utf-8')
+            soup = BeautifulSoup(page_res.text, "html.parser")
+            for tag in soup.find_all("a"):
+                title = tag.text
+                title_url = tag.attrs["href"]
 
-            res_content = pq(res_utf)
-
-            print(res_content)
-            # country_nums = len(pq(res_utf)('.nav-item'))
-            # for i in range(country_nums):
-            #     res_table = pq(pq(res_utf)('.nav-item')[i])
-            #     res_li = res_table('li')
-            #     for i in range(len(res_li)):
-            #         country_url = pq(pq(res_li)[i])('a').attr('href')
-            #         country = pq(pq(res_li)[i])('a').text()
-            #         url_list.append((country, wb_url + country_url))
-            #         print('country:', country)
-
-            break
+                if (title.find("面经")!=-1 or title.find("凉经")!=-1) and title.find("微软")!=-1:
+                    print(title)
+                    print(i,'===============')
+                    res_url = root_url+title_url
+                    url_list.append(res_url)
+    return url_list
 
 
-get_url_list()
+def merge_blank(s):
+    res = ""
+    for i in range(len(s)-1):
+        if s[i] == ' ' and s[i+1] == ' ':
+            continue
+        res+=s[i]
+        if s[i]=="\\" and s[i+1]=="n":
+            i+=2
+
+    return res
+
+
+def get_content(url):
+    # url = "https://www.nowcoder.com/discuss/54773?type=2&order=0&pos=68&page=1"
+    page_res = requests.get(url)
+    soup = BeautifulSoup(page_res.text, "html.parser")
+    print('-------')
+    content = soup.find_all(class_="post-topic-des nc-post-content")
+    content = str(content)
+    del_string = re.findall("<.*?>",content)
+    for dels in set(del_string):
+        content = content.replace(dels,"")
+
+    return merge_blank(content)
+
+
+def save_content(contents):
+    with open("ms_interview.text",mode='w') as f:
+        for content in contents:
+            f.write(content+"\n")
+
+
+def main():
+    ms_interview = [ ]
+    url_list = get_url_list()
+    for url in url_list:
+        text = get_content(url)
+        ms_interview.append((url+" : "+text))
+    print(ms_interview)
+    save_content(ms_interview)
+
+
+if __name__ == "__main__":
+    main()
+
+
+
+
+
+
+
 #
 # def save_excel_url():
 #     save_list = []
