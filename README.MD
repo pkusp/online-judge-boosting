@@ -1,9 +1,9 @@
 ## 目录
 > 更新中...
-### 1. [*classic_algorithm*(一些经典算法)](./classic_algorithm)
-### 2. [*kickstart*](./kickstart)
-### 3. [*leetCode*](./leetCode)
-### 4. [*newcoder*(牛客)](./newcoder)
+1. [*classic_algorithm*(一些经典算法)](./classic_algorithm)
+2. [*kickstart*](./kickstart)
+3. [*leetCode*](./leetCode)
+4. [*newcoder*(牛客)](./newcoder)
 
 ---
 

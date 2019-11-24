@@ -1,4 +1,9 @@
 ## 经典设计模式
+> project on github:
+- [精通Python设计模式](https://github.com/cundi/Mastering.Python.Design.Patterns)
+- [A collection of design patterns and idioms in Python.](https://github.com/faif/python-patterns)
+
+> my view:
 ### 1. 单例模式
 ```cpp
 
