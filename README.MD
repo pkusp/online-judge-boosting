@@ -1,15 +1,25 @@
-## 目录
-> 更新中...
-1. [*classic_algorithm*(一些经典算法)](./classic_algorithm)
-2. [*kickstart*(google)](./kickstart)
-3. [*leetCode*](./leetCode)
-4. [*newcoder*(牛客)](./newcoder)
-5. [*campany_interview*](./campany_interview)
 
+*Repo构成:*
+- [algorithm_collection (经典必会算法)](./algorithm_collection)
+- [kickstart (google-online-judge) ](./kickstart)
+- [leetCode](./leetCode)
+- [design_pattern (设计模式) ](./design_pattern)
+- [interview_collection (大厂面经)](./interview_collection)
 
 ---
+</BR>
+</BR>
+#### 目录
+1. [经典算法原理](##1.经典算法原理)
+2. [必会题型](##2.必会题型)
+3. [leetcode题解](##3.leetcode)
+4. [计算机基础知识](##4.计算机重要基础知识)
+> 更新中...
 
-## 经典算法原理
+</BR>
+</BR>
+</BR>
+## 1.经典算法原理
 
 
 <!-- 
@@ -22,46 +32,55 @@
 
 常见算法的复杂度推导
 
-### 1. 容斥原理的`DP`
+#### 容斥原理的`DP`
 - 先看一道[腾讯黑客马拉松编程题](http://acm.hdu.edu.cn/showproblem.php?pid=4532)，再看代码：
 ```python
 pass
 ```
 
-### 2. 着色问题
+#### 着色问题
 
-### 3. 背包问题
+#### 背包问题
 推荐阅读[背包问题九讲](https://github.com/tianyicui/pack/blob/master/V2.pdf)
 - 0-1背包
 - 完全背包
-### 4. 回溯问题
+#### 回溯问题
 
-### 5. 单调栈问题
+#### 单调栈问题
 
-### 6. 常见`DP`问题
+#### 常见`DP`问题
 - LCS
 - 编辑距离
 - 
-### 7. 寻路问题
+#### 寻路问题
 
 推荐阅读[寻路问题](https://github.com/tianyicui/DP-Book/blob/master/path.pdf)
 
 - 特殊图的寻路
 
 - 一般图的寻路
-### 8. 常见分治算法
+#### 常见分治算法
 
-### 9. 图相关算法
+#### 图相关算法
 
-### 10. 遍历的非递归算法
+#### 遍历的非递归算法
 - 树的遍历
 - 图的遍历
-### 11. KMP
+#### KMP
 - [KMP的原理及代码(C++版)](./classic_algorithm/kmp.MD)
 - [KMP的代码python版(可运行)](./classic_algorithm/kmp.py)
 
----
-## 计算机重要基础知识
+
+## 2.必会题型
+- [反转链表](./algorithm_collection/reverseList.cpp)
+- 
+## 3.leetcode
+- array
+- string
+- dp
+
+
+## 4.计算机重要基础知识
 - [c++](./newcoder/README.MD)
 - [计算机操作系统、网络](./newcoder/README.MD)
 - [设计模式](./newcoder/README.MD)

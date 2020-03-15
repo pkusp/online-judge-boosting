@@ -1,7 +1,7 @@
 
 ## interview
 
-[see also..](../crawler/ms_interview.md)
+[see also..](./crawler/ms_interview.md)
 
 ---
 
