@@ -5,10 +5,7 @@
 `@location: Microsoft Asia`  
 <!--[[check the reference for more information]](http://www.runoob.com/csharp/csharp-string.html)-->  
 
----
-目录|
----|
-[toc]|
+
 
 [reference](http://www.runoob.com/csharp/csharp-data-types.html)
 # C#基础 
