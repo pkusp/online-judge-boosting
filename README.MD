@@ -2,7 +2,7 @@
 *Repo构成:*
 - [algorithm_collection (经典必会算法)](./algorithm_collection)
 - [kickstart (google-online-judge) ](./kickstart)
-- [leetcode](./leetCode)
+- [leetcode](./leetcode)
 - [design_pattern (设计模式) ](./design_pattern)
 - [interview_collection (大厂面经)](./interview_collection)
 - [basic_skills (基础知识)](./basic_skills)
@@ -23,7 +23,7 @@
 </BR>
 </BR>
 
-## 1.经典算法原理
+## 1.经典算法原理  
 
 
 <!-- 
