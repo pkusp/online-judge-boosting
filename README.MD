@@ -10,8 +10,9 @@
 ---  
 </BR>
 </BR>
-#### 目录
-1. [经典算法原理](##1.经典算法原理)   
+
+#### 目录  
+1. [经典算法原理](##1.经典算法原理)     
 2. [算法必会题型](##2.必会题型)  
 3. [leetcode题解](##3.leetcode)  
 4. [设计模式](##4.设计模式)
@@ -21,6 +22,7 @@
 </BR>
 </BR>
 </BR>
+
 ## 1.经典算法原理
 
 
@@ -89,7 +91,9 @@ pass
 - [python (TODO)](./basic_skills/python.MD)  
 - [计算机操作系统、网络](./basic_skills/README.MD)  
 - [docker](./basic_skills/docker.MD)  
+- [JS&H5&Wechat](./basic_skills/wechat.MD)
 
-
+---
+> contact : pkusp@outlook.com
 
 
