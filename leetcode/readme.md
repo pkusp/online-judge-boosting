@@ -109,6 +109,53 @@ public:
         }
 
 ```
+- 283. Move Zeroes
+```cpp 
+
+class Solution {
+public:
+    void moveZeroes(vector<int>& nums) {
+        if(nums.size()<=0) return;
+        int left_pos = 0;
+        while(nums[left_pos]!=0){
+            left_pos++;
+        }
+        int right_pos = left_pos+1;
+        while(right_pos<nums.size()){
+            if(nums[right_pos]!=0){
+                swap(nums[left_pos++],nums[right_pos]);
+            }
+            right_pos++;
+        }  
+    }
+};
+
+```
+- 169. Majority Element
+```cpp
+// Given an array of size n, find the majority element. The majority element is the element that appears more than ⌊ n/2 ⌋ times.
+class Solution {
+public:
+    int majorityElement(vector<int>& nums) {
+     int len = nums.size();
+        int cnt = 1;
+        int candidate = nums[0];
+        for(int i = 1;i<len;++i){
+            if(cnt==0){
+                candidate = nums[i];
+                cnt = 1;
+            }else{
+                if(candidate==nums[i]){
+                    cnt++;
+                }else{
+                    cnt--;
+                }
+            }
+        }
+    return candidate;
+};
+```
+
 
 
 -
