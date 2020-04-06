@@ -79,7 +79,8 @@ pass
 - [反转链表](./algorithm_collection/reverseList.cpp)
 - 
 ## 3.leetcode
-- [leetcode](./leetcode/readme.md)
+- [GOTO: leetcode](./leetcode/readme.md)
+
 
 ## 4.设计模式
 - [design_pattern](./design_pattern/README.MD)
