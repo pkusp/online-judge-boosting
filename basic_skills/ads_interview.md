@@ -16,7 +16,9 @@
 
 - application
     - ip (feature,)
-        - FM
+        - [FFM-ppt](https://www.csie.ntu.edu.tw/~r01922136/slides/ffm.pdf)
+            - [ntu-page-paper&contest](https://www.csie.ntu.edu.tw/~cjlin/libffm/)
+            - [csdn-ffm](https://blog.csdn.net/hestendelin/article/details/101546630)
     - ia(场景优化)
     - cust modeling
         - feature
@@ -73,5 +75,13 @@
 
 
 
+
+
+
+
+
+# competition
+[acm-recsys-2020](http://www.recsyschallenge.com/2020/#participation)
+[kdd-2020]()
 
 
