@@ -349,11 +349,168 @@ public:
 //top() -- Get the top element.
 //getMin() -- Retrieve the minimum element in the stack.
 
+   void push(int x) {
+        s.push(x);
+        if(min_s.empty()||x<min_s.top()) min_s.push(x);
+        else min_s.push(min_s.top());
+    }
+    
+    void pop() {
+        if(!s.empty()){
+        s.pop();
+        min_s.pop();
+        }
+    }
+    
+    int top() {
+        return s.top();
+    }
+    
+    int getMin() {
+        return min_s.top();
+    }
+    
+private:
+    stack<int> s,min_s;
+
+
+```
+
+- House Robber
+```cpp 
+// 0414
+class Solution {
+public:
+    int rob(vector<int>& nums){
+        if(nums.size()==0) return 0;
+        if(nums.size()==1) return nums[0];
+        if(nums.size()==2) return max(nums[0],nums[1]);
+        vector<int> dp(nums.size(),0);
+        dp[0]=nums[0];dp[1]=max(nums[0],nums[1]);
+        for(int i=2;i<nums.size();++i){
+            dp[i] = max(dp[i-1],dp[i-2]+nums[i]);
+        }
+        return dp[nums.size()-1];  
+    }
+};
+
+```
+
+- 141. Linked List Cycle
+```cpp
+// Given a linked list, determine if it has a cycle in it.
+class Solution {
+public:
+    bool hasCycle(ListNode *head) {
+        // if(!head) return false;
+        ListNode *fast = head;
+        ListNode *slow = head;
+        while(fast&&fast->next){
+            fast=fast->next->next;
+            slow=slow->next;
+            if(fast==slow){
+                return true;
+            }
+
+        }
+        return false;
+    }
+};
+
+- 160. intersection of two linked lists
+```cpp
+// Write a program to find the node at which the intersection of two singly linked lists begins.
+//0414
+
+class Solution {
+public:
+    ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
+        if(!headA||!headB) return NULL;
+        int la = getLength(headA);
+        int lb = getLength(headB);
+        ListNode* p=la>lb?headA:headB;
+        ListNode* q=la>lb?headB:headA;
+        for(int i=0;i<abs(la-lb);++i){
+            p=p->next;
+        }
+        while(p){
+            if(p==q) return p;
+            p=p->next;
+            q=q->next;
+        }
+        return NULL;
+        
+    }
+    
+    int getLength(ListNode* p){
+        int cnt=0;
+        while(p){
+            p=p->next;
+            cnt+=1;
+        }
+        return cnt;
+    }
+};
+
+```
+
+- 234. Palindrome Linked List
+```cpp
+class Solution {
+public:
+    bool isPalindrome(ListNode* head){
+        if(!head||!head->next) return true;
+        ListNode *fast=head,*slow=head;
+        stack<int> s;
+        s.push(slow->val);
+        while(fast->next&&fast->next->next){
+            slow=slow->next;
+            fast=fast->next->next;
+            s.push(slow->val);
+        }
+        if(!fast->next) s.pop();
+        slow=slow->next;
+        while(slow){
+            int tmp=s.top();s.pop();
+            if(tmp!=slow->val) return false;
+            slow=slow->next;
+        }
+        return true;
+    }
+
+- 20. valid parentheses
+```cpp
+public:
+    bool isValid(string s) {
+        if(s.empty()) return true;
+        stack<char> stk;
+        map<char,char> mp;
+        mp['('] = ')';
+        mp['[']=']';
+        mp['{'] = '}';
+        for(int i=0;i<s.size();++i){
+            if(mp.find(s[i])!=mp.end()) stk.push(s[i]);
+            else if(!stk.empty()){
+                char candidate=stk.top(); stk.pop();
+                if(mp[candidate]!=s[i]) return false;
+            }else return false;
+        }
+        // if(stk.empty()) return true;
+        // else return false;
+        return stk.empty();
+    }
+```
+
+
+```
+
 
 
 
 
 ```
+
+
 
 -
 -
